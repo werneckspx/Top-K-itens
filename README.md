@@ -52,7 +52,7 @@ Unordered_map: Mapas não ordenados são contêineres associativos que armazenam
 
 Make_heap: Transforma um intervalo de elementos em uma heap. Constrói um heap binário no vetor reordenando os elementos para que eles satisfaçam a restrição de heap. O heap binário é uma árvore binária balanceada que satisfaz a condição de que o valor no nó pai é sempre maior/menor do que os valores dos nós filho. Isso significa que a raiz sempre contém o maior/menor elemento.
 
-Pop_heap(): Remove o elemento de maior prioridade (maior ou menor valor, dependendo da logica do codigo) do topo do heap, e coloca-o na última posição do intervalo do heap. Isso é feito para abrir espaço para inserir um novo valor maior.
+Pop_heap(): Remove o elemento de maior prioridade (maior ou menor valor, dependendo da logica do codigo) do topo do heap, e coloca-o na última posição do intervalo do heap. Isso é feito para abrir espaço para inserir um novo valor maior/menor.
 
 
 # Lógica
