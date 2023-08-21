@@ -70,7 +70,7 @@ Assim, o programa descrito realiza as acoes necessarias para solucionar o proble
    <div align="center"><img width="500px" src="imgs/resultados.jpeg" /> <br></div>
 
 # Conclusao
-  Por meio do projeto e possivel compreender melhor o funcionamento da Hash e do Heap, sendo estruturas fundamentais, que podem ser utilizadas para resolver diversos problemas.
+  Por meio do projeto e possivel compreender melhor o funcionamento da Hash e do Heap, sendo estruturas fundamentais, que podem ser utilizadas para resolver diversos problemas. Neste caso, para a solucao do problema Top K itens, essa combinacao e extramamente viavel, uma vez que elas resolvem o problema, pois e possivel quantificar os elementos, sem o problema de colisoes, e ordenar os elementos de modo que apenas os elementos que mais aparecem nos textos escolhidos sejam mostrados. Para projetos futuros e valida pensar uma melhor forma de retirar caracteres indesejados, para que as palavras sejam contabilizadas de maneira exata.
  # Bibliotecas 
 <p>Para o funcionamento do programa, é necessário incluir as seguintes bibliotecas: 
 <ul>
