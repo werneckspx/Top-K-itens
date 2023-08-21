@@ -34,20 +34,23 @@ No final, a heap conterá os k elementos com maiores valores (frequências) da c
   -  c[i] ≥ c[2i] <br>
   -  c[i] ≥ c[2i + 1] <br>
   
-Onde os filhos de `i` sao: 2i e 2i+1. Consequentemente, temps que o pai de `i` e `i` divido por 2. <br>
+Onde os filhos de `i` sao: 2i e 2i+1. Consequentemente, temps que o pai de `i` e `i` divido por 2. Essa definição deixa a estrutura similar a de uma árvore binária completa. <br>
+
 O exemplo abaixo mostra, por meio de um vetor, o sistema de pai e filho do heap, demonstrado pelas setas.
 <div align="center"><img width="300px" src="imgs/heap.png" /> <br></div>
 
+Observe que o heap apresenta um custo de O(logN), onde N representa o numero de elementos do heap. Uma vez que este se assemelha a uma arvore binária completa, temos a relacao ao numero de nos da arvore, que tambem apresenta custo O(logN) sendo N o numero de nos. O heap apresenta custo O(1), quando houver a necessidade de acessar o elemento que ocupa o topo do vetor.
+
 ## HASH
   A tabela hash, tem uma função de transformação, essa e responsavel por receber cada elemento da entrada e gerar uma chave para esse elemento, e armazena-lo em uma dada posição da tabela, que e endereçada pela chave. Formalmente, essa função pode ser representada como h( Kj ) = [1, . . ., M], em que o subconjunto da entrada de tamanho M é mapeada na posição Kj da tabela. Na literatura, há diversas implementações de tal função, sendo algumas dessas o resto da divisão, meio do quadrado, método da dobra, método da multiplicação, hashing universal. Se a escolha de tal função for adequada ao conjunto e houver entradas suficiente para armazenar todos os elementos sem a repetição de chaves, o custo da pesquisa cairá para O(1). O exemplo abaixo utiliza como função o resto da divisão para o conjunto de dados.Para este exemplo, considere a variável T como tamanho da tabela hash e "e" como o elemento a ser indexado. <br>
-  <div align="center"><img width="300px" src="imgs/hash.jpeg" /> <br></div>
+  <div align="center"><img width="500px" src="imgs/hash.jpeg" /> <br></div>
 Observe através do exemplo que se a função utilizada for adequada e houver espaço suficiente para armazenar um único elemento por posição a estrutura em hash pode alcançar tempos de O( 1 ), o qual se refere ao melhor tempo de execução / melhor caso. Em um caso médio teremos algo próximo de O( 1+N / T ) e no pior caso O( n ).
 
 ## Utilizados
 
 Unordered_map: Mapas não ordenados são contêineres associativos que armazenam elementos formados pela combinação de um valor de chave e um valor mapeado e que permitem a recuperação rápida de elementos individuais com base em suas chaves. Em um unordered_map, o valor da chave geralmente é usado para identificar exclusivamente o elemento, enquanto o valor mapeado é um objeto com o conteúdo associado a essa chave. Os tipos de chave e valor mapeado podem ser diferentes. Internamente, os elementos no unordered_map não são classificados em nenhuma ordem específica em relação a sua chave ou valores mapeados, mas organizados em buckets dependendo de seus valores de hash para permitir acesso rápido a elementos individuais diretamente por seus valores de chave.
 
-Make_heap: Transforma um intervalo de elementos em uma heap.
+Make_heap: Transforma um intervalo de elementos em uma heap. Constrói um heap binário no vetor reordenando os elementos para que eles satisfaçam a restrição de heap. O heap binário é uma árvore binária balanceada que satisfaz a condição de que o valor no nó pai é sempre maior/menor do que os valores dos nós filho. Isso significa que a raiz sempre contém o maior/menor elemento.
 
 Pop_heap(): Remove o elemento de maior prioridade (maior ou menor valor, dependendo da logica do codigo) do topo do heap, e coloca-o na última posição do intervalo do heap. Isso é feito para abrir espaço para inserir um novo valor maior.
 
@@ -61,10 +64,13 @@ Verifica se existe numeros nessa palavra, uma vez que uma palavra e feita apenas
 A insercao na hash e feita atraves de uma condicao, utilizando a funcao `find()` e `end()` que percorre toda a Hash, verifica se a palavra a ser inserida ja existe, se a palavra existir, e somado 1 a sua quantidade, do contrario a palavra e inserida na Hash.
 Sendo assim, a partir da funcao `leitor_principal()`, chamada na funcao `fn_principal()` ocorre a leitura dos arquivos desejados. <br>
 Em seguida, inicializa-se a vector com 20 elementos da Hash, e e feito o processo do Heap, por meio da funcao `make_heap()`. Apos isso, com o vector ja inicializado, ocorre a leitura dos restantes elementos que estao na Hash. Se o valor da Hash, for maior que o primeiro elemento do vector, este primeiro elemento do vector, que apresenta o menor valor entre os demais e removido, utilizando as funcoes `pop_heap()` e `pop_back()`, e o elemento maior vindo da Hash e adionado ao vector, em seguida a funcao `make_heap()` e novamente chamada para realizar o Heap novamente apos a insercao do novo valor.
+Assim, o programa descrito realiza as acoes necessarias para solucionar o problema descrito.
  # Resultados 
    Considerando a lógica e a descrição do problema acima, o resultado esperado durante a leitura dos arquivos:
-   <div align="center"><img width="300px" src="imgs/resultados.jpeg" /> <br></div>
-   
+   <div align="center"><img width="500px" src="imgs/resultados.jpeg" /> <br></div>
+
+# Conclusao
+  Por meio do projeto e possivel compreender melhor o funcionamento da Hash e do Heap, sendo estruturas fundamentais, que podem ser utilizadas para resolver diversos problemas.
  # Bibliotecas 
 <p>Para o funcionamento do programa, é necessário incluir as seguintes bibliotecas: 
 <ul>
