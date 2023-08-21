@@ -18,6 +18,17 @@
      
 No final, a heap conterá os k elementos com maiores valores (frequências) da coleção de dados.
 
+# Arquivos
+|  Arquivo                        |   Função                                                                                          |
+| ------------------------------- | ------------------------------------------------------------------------------------------------- |
+|  `main.cpp`                       | arquivo principal para iniciar e chamar as funções do código                                                    |
+|  `read.hpp`                  | define as funções que foram utilizadas no código |
+|  `read.cpp`                  | contém o escopo de todas as funções que foram utilizadas |
+|  `DomCasmurro.txt`               | arquivo de entrada no qual será feita a análise das palavras |
+| `Semana_Machado_Assis.txt` | arquivo de entrada principal no qual será feita a análise das palavras |
+| `stopwords.csv` | arquivo que contem as stop words|
+
+
 ## HEAP
   O heap, tem uma sequencia de elementos com chaves, c[1], c[2], ..., c[n], tal que, para que as chaves satisfaçam a condição de funcionamento, a chave de um nó pai deve ser maior que a chave aplicada à seus filhos. Para todo `i`, temos que: 
   -  c[i] ≥ c[2i] <br>
@@ -51,22 +62,18 @@ A insercao na hash e feita atraves de uma condicao, utilizando a funcao `find()`
 Sendo assim, a partir da funcao `leitor_principal()`, chamada na funcao `fn_principal()` ocorre a leitura dos arquivos desejados. <br>
 Em seguida, inicializa-se a vector com 20 elementos da Hash, e e feito o processo do Heap, por meio da funcao `make_heap()`. Apos isso, com o vector ja inicializado, ocorre a leitura dos restantes elementos que estao na Hash. Se o valor da Hash, for maior que o primeiro elemento do vector, este primeiro elemento do vector, que apresenta o menor valor entre os demais e removido, utilizando as funcoes `pop_heap()` e `pop_back()`, e o elemento maior vindo da Hash e adionado ao vector, em seguida a funcao `make_heap()` e novamente chamada para realizar o Heap novamente apos a insercao do novo valor.
  # Resultados 
-   Considerando a lógica e a descrição do problema acima, os resultados esperados durante a leitura do arquivo com 4 matrizes 7x7:<br><br>
+   Considerando a lógica e a descrição do problema acima, o resultado esperado durante a leitura dos arquivos:
    <div align="center"><img width="300px" src="imgs/teste1.jpeg" /> <br></div>
-   
- > OBS: O resultado apresentado é de apenas uma matriz 7x7.
-   Todas as matrizes apresentaram o mesmo padrão de resultado, ao finalizar o processo de leitura, irá retornar a soma de todas as somas. <br>
    
  # Bibliotecas 
 <p>Para o funcionamento do programa, é necessário incluir as seguintes bibliotecas: 
 <ul>
-    <li><code>#include 'iostream'</code></li>
-    <li><code>#include 'fstream'</code></li>
-    <li><code>#include 'vector'</code></li>
-    <li><code>#include 'string'</code></li>
-    <li><code>#include 'stream'</code></li>
-    <li><code>#include 'iterator'</code></li>
+    <li><code>#include 'bits/stdc++.h'</code></li>
     <li><code>#include 'algorithm'</code></li>
+    <li><code>#include 'vector'</code></li>
+    <li><code>#include 'cctype'</code></li>
+    <li><code>#include 'iomanip'</code></li>
+    <li><code>#include 'iostream'</code></li>
 </ul>
 
 # Compilação e Execução
